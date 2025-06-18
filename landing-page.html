@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conexão ND</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --azul: #85C1E9;
+      --verde: #A9DFBF;
+      --rosa: #FADBD8;
+      --cinza-claro: #F2F3F4;
+      --cinza-escuro: #2E2E2E;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--cinza-claro);
+      color: var(--cinza-escuro);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--azul);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      color: white;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: white;
+    }
+
+    .hero h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--cinza-escuro);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+    }
+
+    .btn-primary {
+      padding: 12px 25px;
+      background-color: var(--verde);
+      color: var(--cinza-escuro);
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #7DCEA0;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      background-color: var(--rosa);
+    }
+
+    .feature {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 10px;
+      width: 280px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .feature h3 {
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: var(--cinza-escuro);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Conexão ND</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Funcionalidades</a>
+      <a href="#">Entrar</a>
+      <a href="#">Criar Conta</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Onde ser você é o começo de tudo.</h2>
+    <p>Conexão ND é um espaço seguro e acolhedor para pessoas neurodivergentes com TEA e TDAH encontrarem amizades, afeto e apoio verdadeiro.</p>
+    <button class="btn-primary">Criar minha conta</button>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>Espaço Seguro</h3>
+      <p>Ambiente moderado com respeito e empatia. Aqui você pode ser quem é.</p>
+    </div>
+    <div class="feature">
+      <h3>Conexões Reais</h3>
+      <p>Faça amizades ou conheça alguém especial com interesses semelhantes aos seus.</p>
+    </div>
+    <div class="feature">
+      <h3>Acessibilidade ND</h3>
+      <p>Modo foco, comunicação adaptada, controle sensorial e linguagem clara.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Conexão ND · contato@conexaond.com.br
+  </footer>
+
+</body>
+</html>
