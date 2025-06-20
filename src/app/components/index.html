@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+
+  <header>
+    <h1>Conexão ND</h1>
+    <nav>
+      <a onclick="openModal('login')">Entrar</a>
+      <a onclick="openModal('cadastro')">Criar Conta</a>
+    </nav><button class="btn-focus" onclick="toggleFocusMode()">Modo Foco</button>
+  </header>
+
+  <section class="hero">
+    <h2>Onde ser você é o começo de tudo.</h2>
+    <p>Um espaço seguro e acolhedor para pessoas com TEA e TDAH se conectarem com empatia e autenticidade.</p>
+    <button class="btn-primary" onclick="openModal('cadastro')">Criar minha conta</button>
+  </section>
+
+  <!-- Modal Login -->
+  <div id="login" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('login')">&times;</span>
+      <h3>Entrar</h3>
+      <input type="email" placeholder="E-mail" />
+      <input type="password" placeholder="Senha" />
+      <button class="btn-primary">Entrar</button>
+    </div>
+  </div>
+
+  <!-- Modal Cadastro -->
+  <div id="cadastro" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('cadastro')">&times;</span>
+      <h3>Cadastro</h3>
+      <input type="text" placeholder="Nome completo" />
+      <label for="data-nascimento">Data de Nascimento</label>
+      <input type="date" id="data-nascimento" name="data-nascimento" required />
+      <input type="email" placeholder="E-mail" />
+      <input type="password" placeholder="Crie uma senha" />
+      <button class="btn-primary" onclick="validarCadastro()">Cadastrar</button>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Conexão ND · contato@conexaond.com.br
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
