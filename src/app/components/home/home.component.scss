@@ -1,18 +1,9 @@
 :root {
   --verde: #A9DFBF;
   --verde-hover: #7DCEA0;
-  --cinza-escuro: #2E2E2E;
-  --cinza-claro: #F2F3F4;
   --branco: #FFFFFF;
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: var(--cinza-claro);
-  color: var(--cinza-escuro);
-  margin: 0;
-  padding: 0;
-}
 
 header, footer {
   background-color: var(--branco);
@@ -97,13 +88,21 @@ footer {
 }
 
 .focus-mode header,
-.focus-mode footer,
-.focus-mode .btn-focus {
+.focus-mode footer {
   display: none !important;
 }
+
 
 .focus-mode body {
   background: #fff;
   color: #000;
 }
 
+.logo {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo:hover {
+  color: var(--verde-hover);
+}
