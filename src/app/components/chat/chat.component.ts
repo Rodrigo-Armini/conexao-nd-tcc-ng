@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-conexao',
-  templateUrl: './conexao.component.html',
-  styleUrls: ['./conexao.component.scss']
+  templateUrl: './chat.component.html',
+  styleUrls: ['./chat.component.scss']
 })
-export class ConexaoComponent {
+export class ChatComponent {
   mensagens: string[] = [];
   novaMensagem = '';
 

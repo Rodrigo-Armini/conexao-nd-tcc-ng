@@ -1,42 +1,29 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meu Perfil - Conexão ND</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="perfil.css">
-</head>
-<body>
+<div class="perfil-container">
+  <h2>Editar Perfil</h2>
 
-  <div class="perfil-container">
-    <h2>Editar Perfil</h2>
+  <label for="foto-perfil">Foto de Perfil</label>
+  <input type="file" id="foto-perfil" accept="image/*" onchange="mostrarPreview()" />
+  <img id="preview-imagem" src="" alt="Preview da foto"
+    style="display:none; margin-top:15px; max-width:150px; border-radius: 50%;" />
 
-    <label for="foto-perfil">Foto de Perfil</label>
-    <input type="file" id="foto-perfil" accept="image/*" onchange="mostrarPreview()" />
-    <img id="preview-imagem" src="" alt="Preview da foto" style="display:none; margin-top:15px; max-width:150px; border-radius: 50%;" />
+  <label for="nome">Nome completo</label>
+  <input type="text" id="nome" placeholder="Seu nome completo" />
 
-    <label for="nome">Nome completo</label>
-    <input type="text" id="nome" placeholder="Seu nome completo" />
+  <label for="email">E-mail</label>
+  <input type="email" id="email" placeholder="seu@email.com" />
 
-    <label for="email">E-mail</label>
-    <input type="email" id="email" placeholder="seu@email.com" />
-
-    <label>Neurodivergência</label>
-    <div class="checkbox-group">
-      <label><input type="checkbox" name="nd" value="TEA"> TEA</label>
-      <label><input type="checkbox" name="nd" value="TDAH"> TDAH</label>
-      <label><input type="checkbox" name="nd" value="Dislexia"> Dislexia</label>
-      <label><input type="checkbox" name="nd" value="Ansiedade"> Ansiedade</label>
-      <label><input type="checkbox" name="nd" value="Outra"> Outra</label>
-    </div>
-
-    <label for="hobbies">Hobbies e Interesses</label>
-    <textarea id="hobbies" rows="4" placeholder="Ex: música, leitura, astronomia, jogos, caminhadas..."></textarea>
-
-    <button class="btn-salvar" onclick="salvarPerfil()">Salvar Perfil</button>
+  <label>Neurodivergência</label>
+  <div class="checkbox-group">
+    <label><input type="checkbox" name="nd" value="TEA"> TEA</label>
+    <label><input type="checkbox" name="nd" value="TDAH"> TDAH</label>
+    <label><input type="checkbox" name="nd" value="Dislexia"> Dislexia</label>
+    <label><input type="checkbox" name="nd" value="Ansiedade"> Ansiedade</label>
+    <label><input type="checkbox" name="nd" value="Outra"> Outra</label>
+    <label><input type="checkbox" name="nd" value="Neurotipico"> Neurotipico</label>
   </div>
 
-  <script src="perfil.js"></script>
-</body>
-</html>
+  <label for="hobbies">Hobbies e Interesses</label>
+  <textarea id="hobbies" rows="4" placeholder="Ex: música, leitura, astronomia, jogos, caminhadas..."></textarea>
+
+  <button class="btn-salvar" onclick="salvarPerfil()">Salvar Perfil</button>
+</div>
