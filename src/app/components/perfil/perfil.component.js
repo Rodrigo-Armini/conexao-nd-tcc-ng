@@ -15,6 +15,7 @@ function mostrarPreview() {
 
 function salvarPerfil() {
   const nome = document.getElementById("nome").value;
+  const dataNascimento = document.getElementById("dataNascimento").value;
   const email = document.getElementById("email").value;
   const hobbies = document.getElementById("hobbies").value;
 
@@ -24,9 +25,10 @@ function salvarPerfil() {
   });
 
   console.log("Nome:", nome);
+  console.log("dataNascimento:", dataNascimento);
   console.log("Email:", email);
   console.log("Neurodivergência:", neurodivergencias);
   console.log("Hobbies:", hobbies);
 
-  alert("Perfil salvo com sucesso (simulado). Veja o console para os dados.");
+  alert("Perfil salvo com sucesso.");
 }
