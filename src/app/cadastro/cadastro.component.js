@@ -1,5 +1,6 @@
 function validarCadastro(event) {
   event.preventDefault();
+  debugger
   const dataNascimento = document.getElementById("dataNascimento").value;
   const mensagemErro = document.getElementById("mensagemErro");
 
