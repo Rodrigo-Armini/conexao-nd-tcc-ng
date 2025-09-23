@@ -1,0 +1,52 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtualenv
+.venv/
+env/
+venv/
+ENV/
+
+# IDE / Editor configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+
+# Database local (se não for para versionar)
+*.db
+*.sqlite3
+
+# Alembic (migrations podem ser versionadas se quiser, ajuste conforme sua necessidade)
+alembic.ini
+alembic/
+
+# Compiled C extensions
+*.so
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints
+
+# Test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+
+# Distribuição / pacotes
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
