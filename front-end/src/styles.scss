@@ -107,3 +107,7 @@ footer {
   color: #000;
 }
 
+body.modo-foco {
+  background: #18191a !important; // fundo escuro bonito
+  transition: background 0.3s;
+}
