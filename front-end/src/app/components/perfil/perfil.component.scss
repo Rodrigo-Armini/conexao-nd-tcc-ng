@@ -89,3 +89,22 @@ textarea {
   background-color: #7DCEA0;
 
 }
+.btn-cancelar {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background: #A9DFBF;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;         /* força a cor do texto */
+  display: inline-block; /* evita comportamento de link */
+}
+
+.btn-cancelar:hover {
+  background-color: #7DCEA0;
+  color: black;         /* mantém preto no hover */
+  text-decoration: none;
+}
