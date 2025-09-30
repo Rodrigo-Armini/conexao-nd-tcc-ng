@@ -8,7 +8,21 @@ import { RouterOutlet } from '@angular/router';
   template: `
     <button
       (click)="alternarModoFoco()"
-      style="position:fixed;top:1rem;right:1rem;z-index:999;"
+      (mouseover)="hover = true"
+      (mouseleave)="hover = false"
+      [style.backgroundColor]="hover ? '#7DCEA0' : '#A9DFBF'"
+      style="
+        position: fixed;
+        top: 0.5rem;
+        right: 1rem;
+        z-index: 999;
+        color: black;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      "
     >
       {{ modoFoco ? 'Desativar Modo Foco' : 'Ativar Modo Foco' }}
     </button>
@@ -17,6 +31,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   modoFoco = false;
+  hover = false;
+
   constructor(private renderer: Renderer2) {}
 
   alternarModoFoco() {
