@@ -1,23 +1,97 @@
 <header>
   <nav class="navbar">
-    <h1><a href="index.html" class="logo">Conexão ND</a></h1>
+    <h1><a routerLink="/" class="logo">Conexão ND</a></h1>
     <div class="nav-links">
-      <a href="perfil">Perfil</a>
-      <a href="cadastro">Cadastrar</a>
+      <a routerLink="/login">Entrar</a>
+      <a routerLink="/cadastro" class="btn-primary">Criar conta</a>
     </div>
   </nav>
 </header>
 
+<div class="foco-wrapper">
+  <button class="btn-focus" (click)="alternarModoFoco()">
+    {{ modoFoco ? 'Desativar modo foco' : 'Ativar modo foco' }}
+  </button>
+</div>
 
 <section class="hero">
   <div class="hero-content">
-    <h2>Uma rede social feita para neurodivergentes</h2>
-    <p>Conecte-se com pessoas autistas, com TDAH e outras neurodivergências em um ambiente acolhedor e sem
-      julgamentos.</p>
-    <a href="/src/app/cadastro/cadastro.component.html" class="btn-primary">Crie sua conta</a>
+    <h2>🧠 Seja bem-vindo(a) à <strong>Conexão ND</strong></h2>
+    <p>O primeiro site brasileiro pensado para pessoas com <strong>TEA</strong> e <strong>TDAH</strong> se conectarem de forma autêntica.</p>
+    <p>Aqui, você pode ser quem é. Sem máscaras, sem julgamentos, sem cobranças. Um espaço online feito para que pessoas neurodivergentes construam amizades, relações afetivas e redes de apoio, com respeito e acolhimento.</p>
   </div>
 </section>
 
+<section class="content">
+  <h3>❤️ Por que existimos?</h3>
+  <p>Muitos de nós sabemos como pode ser difícil socializar em ambientes tradicionais. Aqui na Conexão ND, acreditamos que todos merecem se sentir vistos, ouvidos e compreendidos — especialmente por quem compartilha experiências parecidas.</p>
+
+  <h3>🤝 Como funciona?</h3>
+  <ul>
+    <li>✔️ Cadastre-se gratuitamente</li>
+    <li>✔️ Escolha se busca amizade, romance ou ambas as opções</li>
+    <li>✔️ Crie seu perfil com informações que realmente importam:</li>
+  </ul>
+
+  <ul class="sub-list">
+    <li>Seus interesses</li>
+    <li>Suas necessidades de apoio</li>
+    <li>Seu jeito de se comunicar</li>
+  </ul>
+
+  <p>✔️ Conecte-se com outras pessoas que te entendem de verdade</p>
+
+  <h3>🌟 O que torna a Conexão ND única?</h3>
+  <ul>
+    <li>🧠 Feito por e para pessoas neurodivergentes</li>
+    <li>🔒 Ambiente seguro, com moderação e verificação de perfil</li>
+    <li>💬 Comunicação adaptada: escolha como prefere se expressar</li>
+    <li>🌈 Inclusivo para todas as identidades de gênero e orientações</li>
+    <li>📚 Espaço com conteúdo educativo e dicas práticas para a vida ND</li>
+  </ul>
+
+  <h3>🗨️ Depoimentos de quem já usa</h3>
+  <blockquote>“Aqui eu encontrei alguém que entende minha dificuldade com interação social sem me julgar.” — <strong>João, 27 anos, TDAH</strong></blockquote>
+  <blockquote>“Pela primeira vez, tenho amigas com quem posso conversar sem ansiedade.” — <strong>Camila, 32 anos, autista nível 1</strong></blockquote>
+  <blockquote>“Me sinto em casa. É um lugar feito para mim, do meu jeito.” — <strong>Alex, 24 anos, AuDHD</strong></blockquote>
+
+  <h3>🔎 Comece agora!</h3>
+  <p>Não importa se você está buscando alguém para conversar, um novo amor ou apenas sentir que pertence a algum lugar — você está no lugar certo.</p>
+
+  <div class="cta-buttons">
+    <a routerLink="/cadastro" class="btn-primary">👉 Criar minha conta gratuita</a>
+    <a routerLink="/login" class="btn-secondary">Já tenho conta | Entrar</a>
+  </div>
+
+  <h3>📚 Explore também:</h3>
+  <ul>
+    <li>🧩 Blog com conteúdos sobre TEA, TDAH e vida ND</li>
+    <li>🎧 Entrevistas e histórias reais</li>
+    <li>👥 Grupos por afinidade e interesse</li>
+  </ul>
+
+  <h3>📍 Conexão ND é para quem:</h3>
+  <ul>
+    <li>Tem diagnóstico de TEA, TDAH, AuDHD ou se identifica como neurodivergente</li>
+    <li>Tem mais de 18 anos</li>
+    <li>Quer interações seguras e significativas</li>
+    <li>Está cansado(a) de ambientes em que precisa se "encaixar"</li>
+  </ul>
+
+  <h3>🔒 Segurança em primeiro lugar</h3>
+  <ul>
+    <li>Verificação de perfis</li>
+    <li>Moderação ativa contra assédio e preconceito</li>
+    <li>Opções de bloqueio e denúncia</li>
+    <li>Privacidade respeitada</li>
+  </ul>
+
+  <h3>📞 Fale com a gente</h3>
+  <p>Dúvidas? Sugestões? Queremos ouvir você.</p>
+  <p><a routerLink="/contato">Formulário de contato</a> | <a routerLink="/suporte">Suporte ND</a></p>
+</section>
+
 <footer>
-  <p>&copy; 2025 Conexão ND. Todos os direitos reservados.</p>
+  <p>Conexão ND © 2025</p>
+  <p><a routerLink="/termos">Termos de uso</a> | <a routerLink="/privacidade">Política de privacidade</a> | <a routerLink="/acessibilidade">Acessibilidade</a> | <a routerLink="/redes">Redes sociais</a></p>
 </footer>

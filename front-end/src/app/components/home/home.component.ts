@@ -12,9 +12,9 @@ export class HomeComponent {
   alternarModoFoco() {
     this.modoFoco = !this.modoFoco;
     if (this.modoFoco) {
-      this.renderer.addClass(document.body, 'modo-foco');
+      this.renderer.addClass(document.body, 'focus-mode');
     } else {
-      this.renderer.removeClass(document.body, 'modo-foco');
+      this.renderer.removeClass(document.body, 'focus-mode');
     }
   }
 }
