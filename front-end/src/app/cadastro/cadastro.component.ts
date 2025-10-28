@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'; // ✅ Importar aqui
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { Usuario, UsuarioService } from '../services/usuario.service';
 
 @Component({
   selector: 'app-cadastro',
-  imports: [RouterLink, FormsModule],
+  standalone: true,
+  imports: [CommonModule, FormsModule, RouterLink], // ✅ Adicionar CommonModule
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.scss']
 })
@@ -14,17 +16,17 @@ export class CadastroComponent {
     nome: "",
     email: "",
     senha: ""
-  }
+  };
 
   mensagemErro = "";
 
-  constructor(private usuarioService: UsuarioService, private router: Router) { }
+  constructor(private usuarioService: UsuarioService, private router: Router) {}
 
   cadastrar(): void {
     this.usuarioService.cadastrar(this.formulario).subscribe({
       next: (res) => {
         console.log('Usuário cadastrado', res);
-        this.router.navigate(['/login']); // continua indo para login após cadastro
+        this.router.navigate(['/login']);
       },
       error: (err) => {
         console.error(err);
@@ -34,6 +36,6 @@ export class CadastroComponent {
   }
 
   voltar(): void {
-    this.router.navigate(['/home']);  // agora volta para a Home
+    this.router.navigate(['/home']);
   }
 }
