@@ -1,33 +1,131 @@
-@import '../styles.scss';
+/* Variáveis de cores confortáveis para ND */
+:root {
+  --verde: #6aa84f;           /* Verde suave */
+  --azul-claro: #a4c2f4;      /* Azul calmante */
+  --cinza-claro: #f5f5f5;     /* Fundo neutro */
+  --cinza-escuro: #333333;    /* Texto principal */
+  --texto-secundario: #555555;
+  --foco-bg: #fffbe6;          /* Fundo de modo foco */
+}
 
+/* Fundo da página com imagem */
+body {
+  background: url('/assets/background-nd.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--cinza-escuro);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo foco */
+body.focus-mode {
+  background-color: var(--foco-bg);
+  background-image: none;
+  color: var(--cinza-escuro);
+}
+
+/* Header */
+header {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      font-size: 1.8rem;
+      color: var(--verde);
+      text-decoration: none;
+    }
+
+    .nav-links a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: var(--cinza-escuro);
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background-color: var(--verde);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: darken(var(--verde), 10%);
+    }
+  }
+}
+
+/* Hero section */
+.hero {
+  background-color: rgba(255,255,255,0.8);
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+  h2 {
+    font-size: 2rem;
+    color: var(--verde);
+  }
+
+  p {
+    color: var(--texto-secundario);
+    margin-top: 15px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Botão modo foco */
+.btn-focus {
+  background-color: var(--azul-claro);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 20px auto;
+  display: block;
+  transition: 0.3s;
+}
+
+.btn-focus:hover {
+  background-color: darken(var(--azul-claro), 10%);
+}
+
+/* Content section */
 .content {
   max-width: 900px;
   margin: 40px auto;
-  padding: 0 20px;
-  line-height: 1.6;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 12px;
 
   h3 {
-    color: var(--cinza-escuro);
+    color: var(--verde);
     margin-top: 40px;
   }
 
-  ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 10px 0;
-    li {
-      margin: 6px 0;
-    }
-  }
-
-  .sub-list {
-    padding-left: 20px;
-    font-style: italic;
+  p, li {
+    color: var(--texto-secundario);
   }
 
   blockquote {
     font-style: italic;
-    background: #f8f8f8;
+    background: #e6f7ff;
     border-left: 4px solid var(--verde);
     padding: 10px 15px;
     margin: 10px 0;
@@ -39,6 +137,20 @@
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+
+    .btn-primary {
+      background-color: var(--verde);
+      color: white;
+      border-radius: 8px;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: darken(var(--verde), 10%);
+    }
 
     .btn-secondary {
       background: transparent;
@@ -53,14 +165,27 @@
 
     .btn-secondary:hover {
       background: var(--verde);
+      color: white;
     }
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--texto-secundario);
+  a {
+    color: var(--verde);
+    text-decoration: none;
+    margin: 0 5px;
   }
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   .content {
-    padding: 0 10px;
+    padding: 10px;
   }
 
   .cta-buttons {

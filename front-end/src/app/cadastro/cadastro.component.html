@@ -18,5 +18,9 @@
   <button type="submit" class="btn-cadastrar" (click)="cadastrar()">Cadastrar</button>
   <button type="button" class="btn-voltar" (click)="voltar()">Voltar</button>
 
-  <div id="mensagemErro" class="erro" *ngIf="mensagemErro">{{ mensagemErro }}</div>
+  @if(mensagemErro){
+
+
+    <div id="mensagemErro" class="erro" >{{ mensagemErro }}</div>
+  }
 </div>
