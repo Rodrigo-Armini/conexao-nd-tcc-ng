@@ -1,7 +1,4 @@
 
-function toggleFocusMode() {
-  document.body.classList.toggle("focus-mode");
-}
 
 function validarCadastro() {
   const dataNasc = document.getElementById("data-nascimento").value;

@@ -13,14 +13,21 @@
   <label for="senha">Senha</label>
   <input type="password" id="senha" required [(ngModel)]="formulario.senha">
 
-  <div id="mensagemErro" class="erro"></div>
+  <div id="mensagemErro" class="erro" *ngIf="mensagemErro">{{ mensagemErro }}</div>
 
   <button type="submit" class="btn-cadastrar" (click)="cadastrar()">Cadastrar</button>
   <button type="button" class="btn-voltar" (click)="voltar()">Voltar</button>
 
+<<<<<<< HEAD
   @if(mensagemErro){
 
 
     <div id="mensagemErro" class="erro" >{{ mensagemErro }}</div>
   }
+=======
+  <div class="login-link">
+    Já tem uma conta?
+    <a routerLink="/login">Ir para o Login</a>
+  </div>
+>>>>>>> f810075cb9712d680fcb9af955da577843a3b022
 </div>
